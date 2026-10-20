@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nadiggi Veículos | Carros Usados e Seminovos em Cosmópolis - SP</title>
+<meta name="description" content="Conheça a Nadiggi Veículos em Cosmópolis - SP. Consulte os veículos disponíveis, veja detalhes e entre em contato com nossa equipe.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nadiggi Veículos | Carros Usados e Seminovos em Cosmópolis - SP">
+<meta property="og:description" content="Consulte os veículos disponíveis, veja detalhes e entre em contato com nossa equipe.">
+<meta property="og:image" content="assets/images/hero-fachada.jpg">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111318'/%3E%3Cpath d='M18 48V16h6l16 21V16h6v32h-6L24 27v21z' fill='%23fff'/%3E%3Crect x='18' y='52' width='28' height='3' fill='%23D7262E'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#veiculos">Pular para os veículos</a>
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a href="#inicio" class="logo" aria-label="Nadiggi Veículos, início"><b>NADIGGI</b><span>Veículos</span></a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu"><i></i><i></i><i></i></button>
+    <nav id="nav" class="nav" aria-label="Principal">
+      <a href="#inicio">Início</a><a href="#veiculos">Veículos</a><a href="#sobre">Sobre a loja</a><a href="#contato">Contato</a>
+      <a href="#veiculos" class="btn btn-red sm">Ver veículos</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <img src="assets/images/hero-fachada.jpg" width="1014" height="850" alt="Fachada da Nadiggi Veículos, na Rua Campinas, em Cosmópolis" fetchpriority="high">
+  <div class="wrap hero-in">
+    <p class="eyebrow">Cosmópolis - SP</p>
+    <h1>Seu próximo carro começa aqui.</h1>
+    <p class="lead">Conheça as opções da Nadiggi Veículos e encontre o veículo ideal para o seu próximo passo.</p>
+    <div class="row"><a href="#veiculos" class="btn btn-red">Explorar veículos</a><a href="#contato" class="btn btn-ghost">Fale com a equipe</a></div>
+  </div>
+</section>
+
+<section class="search wrap" aria-label="Buscar veículos">
+  <form id="filters" class="fbar" novalidate>
+    <label>Marca<select id="f-marca"><option value="">Todas</option></select></label>
+    <label>Modelo<input id="f-modelo" type="text" placeholder="Ex.: Onix" autocomplete="off"></label>
+    <label>Ano<select id="f-ano"><option value="">Todos</option></select></label>
+    <label>Preço mínimo<input id="f-min" type="number" min="0" step="1000" inputmode="numeric" placeholder="R$"></label>
+    <label>Preço máximo<input id="f-max" type="number" min="0" step="1000" inputmode="numeric" placeholder="R$"></label>
+    <div class="fbtn"><button type="submit" class="btn btn-red">Buscar veículos</button><button type="button" id="clear" class="btn btn-line">Limpar</button></div>
+    <details class="more">
+      <summary>Mais filtros</summary>
+      <div class="more-in">
+        <label>Busca por texto<input id="f-q" type="search" placeholder="Marca, modelo, cor..."></label>
+        <label>Combustível<select id="f-comb"><option value="">Todos</option></select></label>
+        <label>Câmbio<select id="f-camb"><option value="">Todos</option></select></label>
+        <label>Ordenar<select id="f-sort"><option value="">Relevância</option><option value="menor">Menor preço</option><option value="maior">Maior preço</option><option value="ano">Ano (mais novo)</option></select></label>
+      </div>
+    </details>
+  </form>
+</section>
+
+<section class="sec wrap" id="veiculos">
+  <div class="head"><h2>Encontre seu próximo veículo</h2><p>Confira os veículos disponíveis e encontre uma opção que combine com você.</p></div>
+  <p class="count" id="count" role="status" aria-live="polite"></p>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty" hidden></div>
+</section>
+
+<section class="sec about" id="sobre">
+  <div class="wrap about-in">
+    <div class="about-img rv">
+      <img src="assets/images/showroom-alto.jpg" width="685" height="857" loading="lazy" alt="Showroom da Nadiggi Veículos visto de cima, com carros expostos">
+      <img class="inset" src="assets/images/showroom-bmw.jpg" width="683" height="850" loading="lazy" alt="Veículos expostos no interior da loja">
+    </div>
+    <div class="about-tx rv">
+      <p class="eyebrow">Sobre a loja</p>
+      <h2>Conheça a Nadiggi Veículos</h2>
+      <p>A Nadiggi Veículos está localizada em Cosmópolis - SP. Conheça nosso espaço, consulte as opções disponíveis e converse com nossa equipe para encontrar o veículo que procura.</p>
+      <address>Rua Campinas, 901 - Kalmann<br>Cosmópolis - SP, 13150-580</address>
+      <a href="#contato" class="btn btn-line dark">Como chegar</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec wrap">
+  <ul class="pillars">
+    <li class="rv"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m16 16 5 5"/></svg><h3>Consulte as opções</h3><p>Veja os veículos disponíveis e filtre pelo que importa para você.</p></li>
+    <li class="rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><h3>Tire suas dúvidas</h3><p>Atendimento da equipe para esclarecer o que você precisar.</p></li>
+    <li class="rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7"/></svg><h3>Informações do veículo</h3><p>Fotos e especificações reunidas em cada anúncio.</p></li>
+    <li class="rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><h3>Contato direto</h3><p>Fale com a equipe por telefone, sem intermediários.</p></li>
+  </ul>
+</section>
+
+<section class="sec reviews">
+  <div class="wrap rev-in rv">
+    <div class="score"><b id="rating">4,6</b><span class="stars" aria-hidden="true">★★★★★</span></div>
+    <div><h2>Avaliações no Google Maps</h2><p><span id="rcount">176</span> avaliações. Dados informados pela loja para este projeto.</p></div>
+    <a id="reviewsLink" class="btn btn-ghost" target="_blank" rel="noopener" href="#">Ver avaliações no Google</a>
+  </div>
+</section>
+
+<section class="sec wrap contact" id="contato">
+  <div class="head"><h2>Contato e localização</h2></div>
+  <div class="contact-in">
+    <div class="rv">
+      <h3>Nadiggi Veículos</h3>
+      <address>Rua Campinas, 901 - Kalmann<br>Cosmópolis - SP, 13150-580</address>
+      <p class="phone"><a href="tel:+551938822220">(19) 3882-2220</a></p>
+      <ul class="hours" id="hours" hidden></ul>
+      <div class="row">
+        <a class="btn btn-red" href="tel:+551938822220">Ligar agora</a>
+        <a class="btn btn-line dark" id="mapLink" target="_blank" rel="noopener" href="#">Abrir no Google Maps</a>
+        <a class="btn btn-line dark" id="wppLink" target="_blank" rel="noopener" href="#" hidden>WhatsApp</a>
+      </div>
+    </div>
+    <img class="rv" src="assets/images/fachada-rua.jpg" width="767" height="577" loading="lazy" alt="Esquina da Rua Campinas com a fachada da Nadiggi Veículos">
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap ftr-in">
+    <div><a href="#inicio" class="logo"><b>NADIGGI</b><span>Veículos</span></a><p>Rua Campinas, 901 - Kalmann<br>Cosmópolis - SP, 13150-580</p></div>
+    <nav aria-label="Rodapé"><a href="#inicio">Início</a><a href="#veiculos">Veículos</a><a href="#sobre">Sobre a loja</a><a href="#contato">Contato</a></nav>
+    <p><a href="tel:+551938822220">(19) 3882-2220</a></p>
+  </div>
+  <div class="wrap copy">© <span id="year"></span> Nadiggi Veículos. Todos os direitos reservados.</div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="d-title"></dialog>
+<script src="app.js"></script>
+</body>
+</html>
